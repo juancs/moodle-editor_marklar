@@ -74,6 +74,7 @@ class marklar_texteditor extends texteditor {
         } else {
             $supported[FORMAT_PLAIN] = FORMAT_PLAIN;
             $supported[FORMAT_MOODLE] = FORMAT_MOODLE;
+            $supported[FORMAT_HTML] = FORMAT_HTML;
         }
 
         return $supported;
