@@ -41,8 +41,10 @@ define([
 
         this.initparams = initparams;
 
-        if (typeof M.editor_marklar.fpoptions[initparams.elementid] !== "undefined") {
-            this.initparams.filepickeroptions = M.editor_marklar.fpoptions[initparams.elementid];
+        if (typeof M.editor_marklar.fpoptions !== "undefined") {
+            if (typeof M.editor_marklar.fpoptions[initparams.elementid] !== "undefined") {
+                this.initparams.filepickeroptions = M.editor_marklar.fpoptions[initparams.elementid];
+            }
         }
 
         this.initTextArea(textarea);
