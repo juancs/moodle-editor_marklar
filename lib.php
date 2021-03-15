@@ -114,7 +114,7 @@ class marklar_texteditor extends texteditor {
         // hack to work around that. See MDL-53423 for details.
         $PAGE->requires->js_amd_inline('M.editor_marklar = M.editor_marklar || {}');
         $PAGE->requires->js_amd_inline('M.editor_marklar.fpoptions = M.editor_marklar.fpoptions || {}');
-        $PAGE->requires->js_amd_inline(js_writer::set_variable('M.editor_marklar.fpoptions.'.$elementid, $fpoptions));
+        $PAGE->requires->js_amd_inline(js_writer::set_variable('M.editor_marklar.fpoptions.'.$elementid, convert_to_array($fpoptions)));
 
         $initparams = [
             'elementid' => $elementid,
